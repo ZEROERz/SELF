@@ -1,37 +1,140 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html>
 
-You can use the [editor on GitHub](https://github.com/ZEROERz/SELF/edit/main/docs/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+	<meta charset="utf-8">
+	<title>(｡･∀･)ﾉﾞ</title>
+	<link rel="stylesheet" type="text/css" href="public/css/start.css" />
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+	<link rel="stylesheet" type="text/css" href="public/css/cake.css" />
 
-### Markdown
+	<link rel="stylesheet" type="text/css" href="public/css/photos.css" />
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+	<link rel="stylesheet" type="text/css" href="public/css/wish.css" />
 
-```markdown
-Syntax highlighted code block
+	<link rel="stylesheet" type="text/css" href="public/css/end.css" />
 
-# Header 1
-## Header 2
-### Header 3
+	<style type="text/css">
+		body {
+			margin: 0;
+			padding: 0;
+		}
 
-- Bulleted
-- List
+		.wrap-start {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
 
-1. Numbered
-2. List
+		.wrap-cake {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: #ee9ca7;
 
-**Bold** and _Italic_ and `Code` text
+			display: none;
+		}
 
-[Link](url) and ![Image](src)
-```
+		.wrap-photos {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: #eee;
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
 
-### Jekyll Themes
+			display: none;
+		}
+	</style>
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ZEROERz/SELF/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+</head>
 
-### Support or Contact
+<body>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+	<!-- -------------------开始页面-------------------------- -->
+	<div class="wrap-start">
+		<nav class="nav">
+			<div class="nav-content">
+				<ul class="nav-items">
+					<li class="nav-item"> <span class="item-text"> 距离生日：</span> </li>
+					<li class="nav-item"> <span class="item-text"> <span id="day"> </span> </span> </li>
+					<li class="nav-item"> <span class="item-text"> <span id="hour"></span> </span> </li>
+					<li class="nav-item"> <span class="item-text"> <span id="min"></span> </span> </li>
+					<li class="nav-item"> <span class="item-text"> <span id="sec"></span> </span> </li>
+				</ul>
+			</div>
+			<label class="nav-btn" for="menu-cb" id="navBtn">
+				<span class="btnRail"></span>
+				<span class="btnRail"></span>
+			</label>
+		</nav>
+	</div>
+
+	<!-- -------------------相片页面-------------------------- -->
+	<div class="wrap-photos">
+		<div class="container">
+			<img src="public/img/ameng.jpg" class="pic1" />
+			<img src="public/img/baby.jpg" class="pic2" />
+			<img src="public/img/kolar.jpg" class="pic3" />
+			<img src="public/img/duck.jpg" class="pic4" />
+			<img src="public/img/baby02.jpg" class="pic5" />
+			<img src="public/img/pika02.jpg" class="pic6" />
+			<img src="public/img/pika01.jpg" class="pic7" />
+			<img src="public/img/xiaoxin.jpg" class="pic8" />
+			<img src="public/img/zhanfish.jpg" class="pic9" />
+			<img src="user.jpg" class="pic10" />
+		</div>
+
+	</div>
+	<script src="public/js/photos.js" type="text/javascript" charset="utf-8"></script>
+
+	<!-- -------------------cake页面-------------------------- -->
+	<div class="wrap-cake">
+		<div class="cake">
+			<div class="cake-floor"><img src="public/img/cake-floor.png"></div>
+			<div class="cake-foot"><img src="public/img/cake-foot.png"></div>
+			<div class="cake-candle"><img src="public/img/cake-candle.png"></div>
+			<div class="candle-fire"></div>
+			<div class="cake-text">
+				<h1>Happy Birthday!</h1>
+				<span>悠悠~生日快乐</span>
+			</div>
+		</div>
+
+		<div class="wish" id="endBtn">
+			<span>🎉</span><span>🎉</span><span>🎉</span><span>许个愿望</span>
+		</div>
+	</div>
+
+
+	<!-- -------------------end页面-------------------------- -->
+	<!-- <div class="wrap-end"></div> -->
+
+
+	<!-- -------------------音频页面-------------------------- -->
+	<audio id="audioBir">
+		<source src="public/happybirthday.mp3" type="audio/mpeg">
+	</audio>
+
+	<script>
+		///////////////////////////// 设置生日倒数时间 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+		var t = "2022/05/29,00:00:00"
+	</script>
+
+	
+	<!------------------------------ 开始页面js 开始 -->
+	<script src="public/js/start.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		var endBtn = document.getElementById("endBtn");
+		endBtn.onclick = function () {
+			wrapCake.style.display = "none";
+			endFun();
+		}
+	</script>
+
+	<!------------------------------ end页面js 开始 -->
+	<script src="public/js/end.js" type="text/javascript" charset="utf-8"></script>
+
+</body>
+
+</html>
